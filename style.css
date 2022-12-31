@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+   
+    background: url(https://images.pexels.com/photos/327509/pexels-photo-327509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    font-family: Helvetica, sans-serif;
+    color: rgb(211, 211, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+  }
+  
+  .container {
+    width: 350px;
+    height: 500px;
+    perspective: 800px;
+  }
+  
+  .container:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+  
+  .card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+  }
+  
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .front {
+    background-image: url(https://scontent.fpbh1-1.fna.fbcdn.net/v/t1.15752-9/321747365_657302529429212_4500458141340772630_n.png?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=A7uusbW7lrcAX-UVo2W&_nc_ht=scontent.fpbh1-1.fna&oh=03_AdR1yG4uDBBpqSiGIaUSibfEIDWrRtJ0DPqdAbtzC2TtLQ&oe=63D733B3);
+    background-size: cover;
+  }
+  
+  .back {
+    background-color: #3a3a3a;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    gap: 5rem;
+    background-image: url(https://images.pexels.com/photos/5725977/pexels-photo-5725977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-size: cover;
+  }
+  h1{
+    color:red;
+    font-weight: bold;
+    text-align: center;
+  }
+  p{
+    color:blue;
+    text-align: center;
+    font-weight: bold;
+  }
